@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -7,32 +8,103 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  height: 100vh;
+  display: flex;
+
+  justify-content: center;
+  font-family: sans-serif;
+  background-image: url('./img/galaxy.png');
+  background-size: cover;
+  background-position: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.player {
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
+  background: #db8608;
+
+  color: #fff;
+
+  font-family: sans-serif;
+
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+
+  width: 100%;
+  height: 500px;
+  margin: 0 10px;
+  box-shadow: 0 1px 10px gray;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+#musicName {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controls button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.controls img {
+  font-size: 60px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  transition: all .2s;
+}
+
+.controls img:hover {
+  background-color: lightgray;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time span {
+  font-size: 22px;
+  color: #333;
+}
+
+.footer {
+  width: 100%;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #ddd;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.progress {
+  height: 8px;
+  background-color: #333;
+  border-radius: 5px;
 }
