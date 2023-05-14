@@ -40,8 +40,8 @@ function App() {
     setIsPlaying(false);
   };
   const playPrevSong = () => {
-    const nextSongIndex = (currentSongIndex - 1) % songs.length;
-    setCurrentSongIndex(nextSongIndex);
+    const previousSongIndex = currentSongIndex === 0 ? songs.length - 1 : currentSongIndex - 1;
+    setCurrentSongIndex(previousSongIndex);
     setIsPlaying(false);
   };
 
