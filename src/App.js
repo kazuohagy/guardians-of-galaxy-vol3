@@ -39,6 +39,11 @@ function App() {
     setCurrentSongIndex(nextSongIndex);
     setIsPlaying(false);
   };
+  const playPrevSong = () => {
+    const nextSongIndex = (currentSongIndex - 1) % songs.length;
+    setCurrentSongIndex(nextSongIndex);
+    setIsPlaying(false);
+  };
 
   return (
     <div className="App">
@@ -52,7 +57,7 @@ function App() {
         <audio id="music" src={songs[currentSongIndex].src}></audio>
 
         <div className="controls">
-          <button id="prevButton">
+          <button id="prevButton" onClick={playPrevSong}>
             <img src={prev} alt="Anterior" />
           </button>
           <button onClick={playMusic}>
